@@ -15,15 +15,16 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Config for Better Visibility -->
+    <!-- High-Contrast Bright Colors -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: '#2563eb',   // Brighter vibrant blue
-              accent: '#059669',    // Brighter emerald green
-              highlight: '#c026d3', // Brighter purple
+              primary: '#60a5fa',    // Bright blue
+              accent: '#34d399',     // Bright emerald
+              highlight: '#e879f9',  // Bright purple
+              cardbg: '#1e293b',     // Slightly lighter card background
             },
           },
         },
@@ -32,53 +33,56 @@
 
     <style>
       body {
-        background-color: #111827; /* darker gray for better contrast */
-        color: #f3f4f6; /* very light gray text */
+        background-color: #0f172a; /* Deep dark slate for true dark mode */
+        color: #f1f5f9; /* Very bright off-white text */
         min-height: 100vh;
         font-family: system-ui, -apple-system, sans-serif;
       }
       .btn-primary {
-        background-color: #2563eb;
-        color: white;
+        background-color: #60a5fa;
+        color: #0f172a;
         font-weight: bold;
-        padding: 1rem 2rem;
+        padding: 1.25rem 2.5rem;
         border-radius: 1rem;
         transition: all 0.3s;
-        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
       }
       .btn-primary:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-3px);
+        background-color: #3b82f6;
+        transform: translateY(-4px);
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
       }
       .btn-accent {
-        background-color: #059669;
-        color: white;
+        background-color: #34d399;
+        color: #0f172a;
         font-weight: bold;
-        padding: 1rem 2rem;
+        padding: 1.25rem 2.5rem;
         border-radius: 1rem;
         transition: all 0.3s;
-        box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
       }
       .btn-accent:hover {
-        background-color: #047857;
-        transform: translateY(-3px);
+        background-color: #10b981;
+        transform: translateY(-4px);
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.7);
       }
       .card {
-        background-color: #1f2937; /* slightly lighter than body for visibility */
-        border: 1px solid #374151;
+        background-color: #1e293b; /* Clearly visible card background */
+        border: 2px solid #334155;
         border-radius: 1.5rem;
-        padding: 2.5rem;
-        margin-bottom: 3rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        padding: 3rem;
+        margin-bottom: 4rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
       }
       .grid-box {
-        background-color: #1e293b;
-        border: 1px solid #475569;
-        border-radius: 1rem;
-        padding: 2rem;
+        background-color: #273447;
+        border: 2px solid #475569;
+        border-radius: 1.25rem;
+        padding: 2.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
       }
       .bright-credit {
-        background: linear-gradient(90deg, #c026d3, #2563eb, #059669);
+        background: linear-gradient(90deg, #e879f9, #60a5fa, #34d399);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -87,18 +91,18 @@
   </head>
 
   <body>
-    <!-- Header with Links (Always Visible) -->
-    <header class="bg-gray-950 py-8">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+    <!-- Header with Bright Buttons -->
+    <header class="bg-[#0a1120] py-10 border-b-4 border-[#1e293b]">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center md:text-left">
           Tawhid-Vedanta Bridge Ready Reckoner
         </h1>
-        <div class="flex flex-col sm:flex-row gap-6">
-          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-center text-xl flex items-center justify-center gap-3">
+        <div class="flex flex-col sm:flex-row gap-8">
+          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-center text-2xl flex items-center justify-center gap-4">
             <i data-lucide="book-open"></i>
             Sanatan Ready Reckoner on Myth
           </a>
-          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-center text-xl flex items-center justify-center gap-3">
+          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-center text-2xl flex items-center justify-center gap-4">
             <i data-lucide="external-link"></i>
             Companion Resource
           </a>
@@ -106,30 +110,30 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-16 text-center bg-gradient-to-b from-gray-950 to-gray-900">
+    <!-- Hero -->
+    <section class="py-20 text-center bg-gradient-to-b from-[#0a1120] to-[#0f172a]">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-8">
+        <h2 class="text-6xl md:text-7xl font-extrabold text-white mb-10">
           The Tawhid-Vedanta Bridge
         </h2>
-        <p class="text-2xl md:text-3xl text-gray-200 mb-8">
+        <p class="text-3xl md:text-4xl text-gray-200 mb-10">
           A Comparative Educational Framework for Ex-Muslims and Monotheistic Inquirers Exploring Sanatana Dharma
         </p>
-        <p class="text-xl text-gray-400 mb-12">
+        <p class="text-2xl text-gray-400 mb-16">
           Academic Ready Reckoner • Version 1.0 • January 2026
         </p>
-        <p class="text-4xl md:text-5xl font-extrabold bright-credit">
+        <p class="text-5xl md:text-6xl font-extrabold bright-credit">
           Created by Kallol Chakrabarti, Independent Researcher
         </p>
       </div>
     </section>
 
     <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-6 py-12">
-      <!-- Abstract Card -->
+    <main class="max-w-5xl mx-auto px-6 py-16">
+      <!-- Abstract -->
       <div class="card">
-        <h3 class="text-4xl font-bold text-white mb-10 text-center">Abstract</h3>
-        <div class="text-xl leading-9 space-y-6 text-gray-200">
+        <h3 class="text-5xl font-extrabold text-white mb-12 text-center">Abstract</h3>
+        <div class="text-2xl leading-10 space-y-8 text-gray-100">
           <p><strong>Background:</strong> The transition from strict monotheistic frameworks, particularly Islam, to exploring pluralistic spiritual traditions like Sanatana Dharma (Hinduism) presents unique psychological, theological, and social challenges. Ex-Muslims and skeptical inquirers from Abrahamic backgrounds often encounter conceptual barriers rooted in misconceptions about "idol worship" (shirk), polytheism, and fears of social persecution.</p>
 
           <p><strong>Objective:</strong> This ready reckoner introduces the "Tawhid-Vedanta Bridge"—a novel, neutral educational initiative designed to facilitate understanding of Hinduism's philosophical foundations for individuals transitioning from monotheistic belief systems. The framework addresses 100 common objections raised by ex-Muslims while drawing parallels between Islamic theological concepts (Tawhid, Sufi mysticism) and Hindu philosophical traditions (Advaita Vedanta, Bhakti).</p>
@@ -144,62 +148,61 @@
         </div>
       </div>
 
-      <!-- Core Parallels Grid -->
+      <!-- Core Parallels -->
       <div class="card">
-        <h3 class="text-4xl font-bold text-white mb-12 text-center">Core Conceptual Parallels</h3>
-        <div class="grid md:grid-cols-2 gap-10">
+        <h3 class="text-5xl font-extrabold text-white mb-16 text-center">Core Conceptual Parallels</h3>
+        <div class="grid md:grid-cols-2 gap-12">
           <div class="grid-box">
-            <h4 class="text-3xl font-bold text-blue-400 mb-6">Tawhid ↔ Advaita Non-Dualism</h4>
-            <p class="text-xl text-gray-200">Both traditions affirm radical oneness: "No deity but God" parallels "Brahman is one without a second." The key difference is creator-creation duality in Islam vs. complete non-duality in Advaita.</p>
+            <h4 class="text-4xl font-bold text-primary mb-8">Tawhid ↔ Advaita Non-Dualism</h4>
+            <p class="text-2xl text-gray-100">Both traditions affirm radical oneness: "No deity but God" parallels "Brahman is one without a second." The key difference is creator-creation duality in Islam vs. complete non-duality in Advaita.</p>
           </div>
 
           <div class="grid-box">
-            <h4 class="text-3xl font-bold text-green-400 mb-6">Sufi Mysticism ↔ Bhakti & Jnana</h4>
-            <p class="text-xl text-gray-200">Sufi fana (annihilation in God) and love poetry (Rumi, Hafiz) find strong resonance in Bhakti devotion and Advaitic realization of identity with the Absolute.</p>
+            <h4 class="text-4xl font-bold text-accent mb-8">Sufi Mysticism ↔ Bhakti & Jnana</h4>
+            <p class="text-2xl text-gray-100">Sufi fana (annihilation in God) and love poetry (Rumi, Hafiz) find strong resonance in Bhakti devotion and Advaitic realization of identity with the Absolute.</p>
           </div>
 
           <div class="grid-box">
-            <h4 class="text-3xl font-bold text-purple-400 mb-6">Sharia ↔ Dharma</h4>
-            <p class="text-xl text-gray-200">Fixed divine laws vs. contextual ethical principles adapted to time, place, and individual. Karma replaces rigid punishments.</p>
+            <h4 class="text-4xl font-bold text-highlight mb-8">Sharia ↔ Dharma</h4>
+            <p class="text-2xl text-gray-100">Fixed divine laws vs. contextual ethical principles adapted to time, place, and individual. Karma replaces rigid punishments.</p>
           </div>
 
           <div class="grid-box">
-            <h4 class="text-3xl font-bold text-yellow-300 mb-6">Murti Puja vs. Shirk</h4>
-            <p class="text-xl text-gray-200">Murti is not idol worship but a symbolic aid to focus the mind on formless Brahman — similar to facing the Kaaba during prayer.</p>
+            <h4 class="text-4xl font-bold text-yellow-400 mb-8">Murti Puja vs. Shirk</h4>
+            <p class="text-2xl text-gray-100">Murti is not idol worship but a symbolic aid to focus the mind on formless Brahman — similar to facing the Kaaba during prayer.</p>
           </div>
         </div>
       </div>
 
-      <!-- Disclaimer Card -->
-      <div class="card bg-amber-950/40 border-amber-600">
-        <h3 class="text-4xl font-bold text-amber-300 mb-8 text-center">Important Disclaimer</h3>
-        <p class="text-2xl text-center text-gray-100">
+      <!-- Disclaimer -->
+      <div class="card bg-gradient-to-r from-amber-900/50 to-orange-900/50 border-amber-600">
+        <h3 class="text-5xl font-extrabold text-amber-300 mb-10 text-center">Important Disclaimer</h3>
+        <p class="text-3xl text-center text-gray-50">
           This resource is strictly educational and non-proselytizing. It acknowledges challenges and historical issues in both Islamic and Hindu traditions. The aim is respectful understanding, critical thinking, and safe intellectual exploration — not conversion.
         </p>
       </div>
     </main>
 
-    <!-- Footer with Links Again -->
-    <footer class="bg-gray-950 py-12 border-t-2 border-gray-700">
+    <!-- Footer -->
+    <footer class="bg-[#0a1120] py-16 border-t-4 border-[#1e293b]">
       <div class="max-w-5xl mx-auto px-6 text-center">
-        <p class="text-4xl font-extrabold bright-credit mb-8">
+        <p class="text-5xl font-extrabold bright-credit mb-10">
           Created by Kallol Chakrabarti, Independent Researcher
         </p>
-        <p class="text-xl text-gray-400 mb-10">
+        <p class="text-2xl text-gray-400 mb-12">
           © 2026 Tawhid-Vedanta Bridge • Open Source Educational Resource
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-8">
-          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-2xl">
+        <div class="flex flex-col sm:flex-row justify-center gap-10">
+          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-3xl">
             Sanatan Ready Reckoner on Myth
           </a>
-          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-2xl">
+          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-3xl">
             Companion Resource
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
     <script>
       lucide.createIcons();
     </script>
