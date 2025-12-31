@@ -1,0 +1,18 @@
+# robots.txt for https://helixoriginator.github.io/tawhid-vedanta-bridge/
+
+User-agent: *
+Allow: /
+
+# Allow all content (this is a public educational resource)
+# No restrictions – we want maximum visibility and indexing
+
+Sitemap: https://helixoriginator.github.io/tawhid-vedanta-bridge/sitemap.xml
+
+# Optional: polite crawling
+Crawl-delay: 10
+
+# Hosted on GitHub Pages – standard allowances
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.pdf$        # (if you ever add private PDFs, remove this line)
