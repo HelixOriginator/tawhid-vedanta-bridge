@@ -15,7 +15,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Tailwind Config for Dark Mode + Vibrant Colors -->
+    <!-- Custom Tailwind Config -->
     <script>
       tailwind.config = {
         darkMode: 'class',
@@ -24,7 +24,7 @@
             colors: {
               primary: '#3b82f6',   // vibrant blue
               accent: '#10b981',    // vibrant emerald green
-              highlight: '#a855f7', // vibrant purple for special highlights
+              highlight: '#a855f7', // vibrant purple
             },
           },
         },
@@ -33,7 +33,7 @@
 
     <style>
       body {
-        @apply bg-gray-900 text-gray-100 min-h-screen;
+        @apply bg-gray-900 text-gray-100 min-h-screen font-sans;
       }
       .btn-primary {
         @apply bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 shadow-lg transform hover:scale-105;
@@ -42,13 +42,7 @@
         @apply bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 shadow-lg transform hover:scale-105;
       }
       .card {
-        @apply bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl;
-      }
-      .nav-link {
-        @apply text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-3 rounded-lg transition;
-      }
-      .active-nav {
-        @apply text-white bg-indigo-600;
+        @apply bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8;
       }
       .bright-credit {
         background: linear-gradient(90deg, #a855f7, #3b82f6, #10b981);
@@ -56,101 +50,118 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+      .section-title {
+        @apply text-4xl font-bold mb-8 text-center;
+      }
+      .text-block {
+        @apply prose prose-invert prose-lg max-w-none;
+      }
     </style>
   </head>
 
   <body class="antialiased">
-    <!-- Header / Navigation -->
+    <!-- Header -->
     <header class="bg-gray-950 border-b border-gray-800 sticky top-0 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-white">Tawhid-Vedanta Bridge</h1>
-        <a href="https://github.com/yourusername/tawhid-vedanta-bridge" target="_blank" class="btn-primary flex items-center gap-2">
-          <i data-lucide="github"></i>
-          View on GitHub
-        </a>
+        <div class="flex gap-4">
+          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary">
+            Sanatan Ready Reckoner
+          </a>
+          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent">
+            Companion Resource
+          </a>
+        </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-gray-900 to-gray-800 py-24 text-center">
-      <div class="max-w-4xl mx-auto px-6">
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-gray-900 to-gray-800 py-20 text-center">
+      <div class="max-w-5xl mx-auto px-6">
         <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6">
           The Tawhid-Vedanta Bridge
         </h2>
         <p class="text-xl md:text-2xl text-gray-300 mb-8">
           A Comparative Educational Framework for Ex-Muslims and Monotheistic Inquirers Exploring Sanatana Dharma
         </p>
-        <p class="text-sm text-gray-400 mb-12">Version 1.0 • January 2026</p>
-
-        <!-- Bright Credit Line -->
-        <p class="text-2xl md:text-3xl font-bold mb-12 bright-credit">
+        <p class="text-lg text-gray-400 mb-10">Academic Ready Reckoner • Version 1.0 • January 2026</p>
+        <p class="text-3xl font-bold bright-credit mb-12">
           Created by Kallol Chakrabarti, Independent Researcher
         </p>
-
-        <div class="flex flex-col sm:flex-row gap-8 justify-center">
-          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-lg">
-            Explore Sanatan Ready Reckoner on Myth
-          </a>
-          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-lg">
-            Explore Companion Resource
-          </a>
-        </div>
       </div>
     </section>
 
-    <!-- Main Content Placeholder -->
-    <main class="max-w-5xl mx-auto px-6 py-12">
-      <div class="card p-12 text-center">
-        <h3 class="text-3xl font-bold mb-6">Full Interactive Version Coming Soon</h3>
-        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-          This static landing page serves as the entry point for the Tawhid-Vedanta Bridge project.<br />
-          The complete interactive single-page application (with smooth navigation, collapsible sections, and vibrant dark-mode UI) is available in the GitHub repository.
+    <!-- Full Content (converted from the original React draft) -->
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+      <!-- Abstract -->
+      <section id="abstract" class="card">
+        <h2 class="section-title text-highlight">Abstract</h2>
+        <div class="text-block space-y-4">
+          <p><strong>Background:</strong> The transition from strict monotheistic frameworks, particularly Islam, to exploring pluralistic spiritual traditions like Sanatana Dharma (Hinduism) presents unique psychological, theological, and social challenges. Ex-Muslims and skeptical inquirers from Abrahamic backgrounds often encounter conceptual barriers rooted in misconceptions about "idol worship" (shirk), polytheism, and fears of social persecution.</p>
+          <p><strong>Objective:</strong> This ready reckoner introduces the "Tawhid-Vedanta Bridge"—a novel, neutral educational initiative designed to facilitate understanding of Hinduism's philosophical foundations for individuals transitioning from monotheistic belief systems. The framework addresses 100 common objections raised by ex-Muslims while drawing parallels between Islamic theological concepts (Tawhid, Sufi mysticism) and Hindu philosophical traditions (Advaita Vedanta, Bhakti).</p>
+          <p><strong>Methodology:</strong> This study employs comparative religious analysis, drawing from primary sources including the Quran, Hadith collections (Sahih Bukhari, Sahih Muslim), Upanishads, Bhagavad Gita, and Brahma Sutras. A systematic categorization of objections (ethical, scientific, theological, social) is mapped against corresponding Vedantic responses, emphasizing non-proselytizing education and anonymity-safe formats.</p>
+          <p><strong>Key Findings:</strong> The framework identifies structural parallels between Tawhid (divine oneness) and Advaita (non-dualism), Sufi devotional practices and Bhakti yoga, and Islamic ethical monotheism with Dharmic relativism. It provides evidence-based responses to scientific objections while acknowledging both traditions' historical contexts.</p>
+          <p><strong>Conclusion:</strong> The Tawhid-Vedanta Bridge serves as the first dedicated resource tailored for ex-Muslim audiences, offering a logical, freedom-oriented alternative to strict monotheism without demanding conversion, thus empowering doubt-safe exploration and countering narratives of inevitable communal conflict.</p>
+          <p><strong>Keywords:</strong> Ex-Muslims, Comparative Religion, Advaita Vedanta, Tawhid, Religious Transition, Apostasy, Sanatana Dharma, Interfaith Education</p>
+        </div>
+      </section>
+
+      <!-- Core Conceptual Parallels (Highlights) -->
+      <section id="framework" class="card">
+        <h2 class="section-title text-highlight">Core Conceptual Parallels</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-700 p-6 rounded-xl">
+            <h3 class="text-2xl font-bold text-blue-400 mb-4">Tawhid ↔ Advaita</h3>
+            <p>Both assert radical monotheism: one ultimate reality without a second. Islam maintains creator-creation duality; Advaita sees all as non-different from Brahman.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl">
+            <h3 class="text-2xl font-bold text-green-400 mb-4">Sufi Fana ↔ Bhakti/Moksha</h3>
+            <p>Sufi annihilation in God parallels Bhakti surrender and Advaitic realization of identity with the Absolute.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl">
+            <h3 class="text-2xl font-bold text-purple-400 mb-4">Sharia ↔ Dharma</h3>
+            <p>Fixed divine commands vs. contextual ethical principles adapted to time, place, and person.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Murti Puja Clarified</h3>
+            <p>Not idol worship, but symbolic aids to focus on formless Brahman — similar to facing the Kaaba.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Projects -->
+      <section class="card text-center">
+        <h2 class="section-title text-highlight">Related Projects by the Author</h2>
+        <div class="flex flex-col md:flex-row gap-8 justify-center mt-10">
+          <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="btn-primary text-xl py-6 px-10">
+            <i data-lucide="book-open" class="inline-block mr-2"></i>
+            Sanatan Ready Reckoner on Myth
+          </a>
+          <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="btn-accent text-xl py-6 px-10">
+            <i data-lucide="external-link" class="inline-block mr-2"></i>
+            Companion Educational Resource
+          </a>
+        </div>
+      </section>
+
+      <!-- Disclaimer -->
+      <section class="card bg-red-900/30 border-red-800">
+        <h2 class="text-3xl font-bold text-red-400 mb-6 text-center">Important Disclaimer</h2>
+        <p class="text-lg text-center">
+          This resource is strictly educational and non-proselytizing. It does not claim superiority of any tradition and acknowledges challenges in both Islamic and Hindu contexts. The goal is respectful understanding and safe intellectual exploration.
         </p>
-        <a href="https://github.com/yourusername/tawhid-vedanta-bridge" target="_blank" class="btn-primary inline-flex items-center gap-2 text-lg">
-          <i data-lucide="download"></i>
-          Go to GitHub Repository
-        </a>
-      </div>
-
-      <div class="mt-16 grid md:grid-cols-2 gap-10">
-        <div class="card p-8">
-          <h4 class="text-2xl font-semibold mb-6 text-highlight">Key Features</h4>
-          <ul class="space-y-4 text-gray-300 text-lg">
-            <li>• Dark mode with vibrant accent buttons</li>
-            <li>• Fully mobile-responsive design</li>
-            <li>• Collapsible objection categories</li>
-            <li>• Non-proselytizing, anonymity-safe content</li>
-            <li>• Built with React + Tailwind CSS</li>
-          </ul>
-        </div>
-
-        <div class="card p-8">
-          <h4 class="text-2xl font-semibold mb-6 text-highlight">Related Resources</h4>
-          <ul class="space-y-6 text-gray-300 text-lg">
-            <li>
-              <a href="https://kallolsanatanreadyreckoneronmyth.netlify.app/" target="_blank" class="text-blue-400 hover:text-blue-300 hover:underline">
-                Kallol's Sanatan Ready Reckoner on Myth
-              </a>
-            </li>
-            <li>
-              <a href="https://elegant-kheer-70c642.netlify.app/" target="_blank" class="text-green-400 hover:text-green-300 hover:underline">
-                Companion Educational Project
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-gray-800 py-10 mt-24">
-      <div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
+    <footer class="bg-gray-950 border-t border-gray-800 py-10 mt-20">
+      <div class="max-w-5xl mx-auto px-6 text-center text-gray-400">
         <p class="text-lg">&copy; 2026 Tawhid-Vedanta Bridge • Open Source Educational Resource</p>
-        <p class="mt-4 text-sm">
-          Created by <span class="font-semibold bright-credit">Kallol Chakrabarti</span>, Independent Researcher
+        <p class="mt-4 text-xl font-bold bright-credit">
+          Created by Kallol Chakrabarti, Independent Researcher
         </p>
-        <p class="mt-4 text-sm">
-          This project is for educational purposes only and promotes critical thinking and respectful interfaith understanding.
+        <p class="mt-6 text-sm">
+          For inquiries or feedback: Available via linked projects.
         </p>
       </div>
     </footer>
